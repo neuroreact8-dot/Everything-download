@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SitePulse Metrics | SEO & Website Tools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; font-family: 'Segoe UI', sans-serif; }
+        .tool-card { background: #1e293b; border: 1px solid #334155; transition: 0.3s; }
+        .tool-card:hover { border-color: #3b82f6; transform: scale(1.02); }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Navbar -->
+    <nav class="p-5 flex justify-between items-center border-b border-gray-800">
+        <h1 class="text-2xl font-black"><i class="fas fa-chart-line text-blue-400"></i> SitePulse</h1>
+        <a href="#pricing" class="bg-blue-600 px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-500">Upgrade to Pro</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="text-center py-20 px-4">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Audit Any Website Instantly</h2>
+        <p class="text-gray-400 mb-8 max-w-xl mx-auto">Check speed, traffic, domain age, and SEO metrics in seconds.</p>
+        
+        <div class="max-w-2xl mx-auto flex flex-col md:flex-row gap-3 bg-gray-800 p-3 rounded-2xl">
+            <input type="text" id="siteInput" placeholder="Enter domain (e.g. google.com)" class="flex-1 bg-transparent px-4 py-3 outline-none placeholder-gray-500">
+            <button onclick="analyzeSite()" class="bg-blue-600 px-8 py-3 rounded-xl font-bold hover:bg-blue-500">Analyze</button>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="max-w-6xl mx-auto px-4 pb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="tool-card p-6 rounded-2xl">
+            <i class="fas fa-tachometer-alt text-3xl text-green-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Speed Test</h3>
+            <p class="text-gray-400 text-sm mb-4">Analyze your website's loading speed and performance score.</p>
+            <span class="text-xs bg-green-900 text-green-300 px-3 py-1 rounded-full">Free Tool</span>
+        </div>
+        <div class="tool-card p-6 rounded-2xl relative overflow-hidden">
+            <div class="absolute top-3 right-3 bg-yellow-500 text-black text-xs px-2 py-1 rounded font-bold">PRO</div>
+            <i class="fas fa-users text-3xl text-purple-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Traffic Checker</h3>
+            <p class="text-gray-400 text-sm mb-4">Estimate monthly visitors, bounce rate, and traffic sources.</p>
+            <span class="text-xs bg-yellow-900 text-yellow-300 px-3 py-1 rounded-full">Premium Only</span>
+        </div>
+        <div class="tool-card p-6 rounded-2xl">
+            <i class="fas fa-history text-3xl text-blue-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Domain Age Checker</h3>
+            <p class="text-gray-400 text-sm mb-4">Find out exactly when a domain was first registered.</p>
+            <span class="text-xs bg-green-900 text-green-300 px-3 py-1 rounded-full">Free Tool</span>
+        </div>
+        <div class="tool-card p-6 rounded-2xl">
+            <i class="fas fa-globe text-3xl text-red-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Website Unblocker</h3>
+            <p class="text-gray-400 text-sm mb-4">Access restricted websites securely using our proxy tools.</p>
+            <span class="text-xs bg-green-900 text-green-300 px-3 py-1 rounded-full">Free Tool</span>
+        </div>
+        <div class="tool-card p-6 rounded-2xl relative overflow-hidden">
+            <div class="absolute top-3 right-3 bg-yellow-500 text-black text-xs px-2 py-1 rounded font-bold">PRO</div>
+            <i class="fas fa-code text-3xl text-cyan-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Website Builder AI</h3>
+            <p class="text-gray-400 text-sm mb-4">Generate website designs and code using AI prompts.</p>
+            <span class="text-xs bg-yellow-900 text-yellow-300 px-3 py-1 rounded-full">Premium Only</span>
+        </div>
+    </section>
+
+    <script>
+        function analyzeSite() {
+            const site = document.getElementById('siteInput').value;
+            if(!site) { alert("Please enter a website URL."); return; }
+            alert("Analyzing " + site + "... \nConnecting to SitePulse Metrics API...");
+            // Real integration: You will use Google PageSpeed Insights API here
+        }
+    </script>
+</body>
+  </html>
